@@ -1,1 +1,564 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Здравен център Алфа | Холистично здраве в Костинброд</title>
+
+    <meta name="description" content="Здравен център Алфа – Костинброд. Холистичен център за здраве под ръководството на д-р Пламенка Томова. Хомеопатия, биорезонанс, компютърна диагностика, масажи.">
+    <meta name="keywords" content="Здравен център Алфа, Костинброд, хомеопатия, биорезонанс, масажи, холистичен център">
+    <meta name="author" content="Здравен център Алфа">
+
+    <meta property="og:title" content="Здравен център Алфа | Холистично здраве в Костинброд">
+    <meta property="og:description" content="Холистичен център за здраве под ръководството на д-р Пламенка Томова.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+
+    <style>
+        :root {
+            --white: #ffffff;
+            --light-bg: #f7fbfd;
+            --mint: #d9f7ef;
+            --mint-strong: #a8e8d7;
+            --blue-soft: #e8f4ff;
+            --blue-accent: #3bb9ff;
+            --teal-accent: #2bb9a8;
+            --text-main: #1a1a1a;
+            --text-muted: #6b6b6b;
+            --border: #d9e2ec;
+            --radius: 14px;
+            --shadow: 0 8px 22px rgba(0,0,0,0.08);
+            --max-width: 1180px;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, sans-serif;
+            background: var(--light-bg);
+            color: var(--text-main);
+        }
+
+        .shell {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 18px;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: var(--blue-soft);
+    color: var(--text-main);
+    padding: 10px 16px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dropbtn:hover {
+    background: var(--mint);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    min-width: 180px;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    z-index: 100;
+}
+
+.dropdown-content a {
+    color: var(--text-main);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.2s;
+}
+
+.dropdown-content a:hover {
+    background: var(--blue-soft);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hide old nav links */
+.nav-links {
+    display: none !important;
+}
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--mint), var(--blue-soft));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--teal-accent);
+            font-size: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--teal-accent);
+        }
+
+        .nav-cta {
+            padding: 8px 16px;
+            background: var(--teal-accent);
+            color: white;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transition: 0.2s;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+        }
+
+        .hero {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media(max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hero-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .hero-title span {
+            color: var(--teal-accent);
+        }
+
+        .hero-sub {
+            font-size: 17px;
+            color: var(--text-muted);
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+        }
+
+        .btn-main {
+            background: var(--teal-accent);
+            color: white;
+            padding: 12px 22px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-sec {
+            background: var(--blue-soft);
+            color: var(--text-main);
+            padding: 12px 22px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero-card {
+            background: var(--white);
+            padding: 22px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 220px;
+            border-radius: var(--radius);
+            background: var(--blue-soft);
+            border: 2px dashed var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="shell">
+       <nav>
+    <div class="logo">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">Здравен център Алфа</div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Меню ▾</button>
+        <div class="dropdown-content">
+            <a href="#services">Услуги</a>
+            <a href="#team">Екип</a>
+            <a href="#reviews">Отзиви</a>
+            <a href="#schedule">График</a>
+            <a href="#contact">Контакти</a>
+            <a href="#gallery">Снимки</a>
+        </div>
+    </div>
+
+    <a class="nav-cta" href="tel:0897908801">089 790 8801</a>
+</nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <div class="shell">
+        <div>
+            <h1 class="hero-title">Холистичен здравен център <span>„Алфа“</span></h1>
+            <p class="hero-sub">
+                Център за холистично здраве в Костинброд, ръководен от д-р Пламенка Томова и нейния екип.
+                Предлагаме хомеопатия, биорезонанс, компютърна диагностика, масажи и индивидуални терапии.
+            </p>
+
+            <div class="hero-cta">
+                <a href="tel:0897908801" class="btn-main">Запази час</a>
+                <a href="#services" class="btn-sec">Виж услугите</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="hero-img">Тук ще бъде добавена снимка</div>
+        </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<section id="services" style="padding:60px 0;">
+    <div class="shell">
+        <h2 style="font-size:28px; font-weight:700; margin-bottom:10px;">Нашите услуги</h2>
+        <p style="color:var(--text-muted); margin-bottom:30px; font-size:16px;">
+            В „Алфа“ предлагаме комбинация от холистични и допълващи методи, насочени към баланс, комфорт и подкрепа на здравето.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px;">
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Компютърна диагностика</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Диагностика с апарати Life Stream и Sensitiv 500 Imago, даваща цялостен поглед върху състоянието на организма.
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Биорезонансна терапия</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Процедури, насочени към хармонизиране и подпомагане на естествените процеси в организма чрез честотен баланс.
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Хомеопатия</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Индивидуално подбрани хомеопатични средства, съобразени с цялостния профил на човека.
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Класически и лечебни масажи</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Масажи за отпускане, освобождаване на напрежение и подобряване на подвижността.
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Юмейхо терапия</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Мануален метод за възстановяване на стойката, подвижността и енергийния баланс.
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:8px;">Консултации за хранителни добавки</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Насоки за избор на добавки според индивидуалните нужди – енергия, имунитет, възстановяване.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="padding:60px 0; background:var(--blue-soft);">
+    <div class="shell">
+        <h2 style="font-size:28px; font-weight:700; margin-bottom:10px;">Нашият екип</h2>
+        <p style="color:var(--text-muted); margin-bottom:30px; font-size:16px;">
+            Екип от специалисти, обединени от идеята за внимателен и цялостен подход към човека.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px;">
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); text-align:center;">
+                <div style="width:80px; height:80px; margin:0 auto 12px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--teal-accent); font-size:22px;">
+                    ПТ
+                </div>
+                <h3 style="font-size:20px; margin-bottom:6px;">Д-р Пламенка Томова</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Вътрешни болести · Белодробни болести · Хомеопатия
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); text-align:center;">
+                <div style="width:80px; height:80px; margin:0 auto 12px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--teal-accent); font-size:22px;">
+                    СТ
+                </div>
+                <h3 style="font-size:20px; margin-bottom:6px;">Силвия Томова-Новкова</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Хомеопатия · Биорезонанс · Електронна гем терапия
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); text-align:center;">
+                <div style="width:80px; height:80px; margin:0 auto 12px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--teal-accent); font-size:22px;">
+                    СИ
+                </div>
+                <h3 style="font-size:20px; margin-bottom:6px;">Силвер Илиев</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Класически и лечебни масажи · Юмейхо
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow); text-align:center;">
+                <div style="width:80px; height:80px; margin:0 auto 12px; border-radius:50%; background:var(--mint); display:flex; align-items:center; justify-content:center; font-weight:700; color:var(--teal-accent); font-size:22px;">
+                    СП
+                </div>
+                <h3 style="font-size:20px; margin-bottom:6px;">Силвия Предоева</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Консултант хранителни добавки
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" style="padding:60px 0;">
+    <div class="shell">
+        <h2 style="font-size:28px; font-weight:700; margin-bottom:10px;">Отзиви</h2>
+        <p style="color:var(--text-muted); margin-bottom:30px; font-size:16px;">
+            Част от мненията, споделени онлайн за здравен център „Алфа“.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;">
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:18px; margin-bottom:6px;">Пациент на центъра</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    „Вече със семейството сме ваши не само пациенти, а и почитатели. Благодаря за доброто отношение и резултатното лечение!“
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:18px; margin-bottom:6px;">Ionel Ilieva</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    „Страхотно отношение и професионализъм. Препоръчвам!“
+                </p>
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:18px; margin-bottom:6px;">Alexander Karadzhov</h3>
+                <p style="color:var(--text-muted); font-size:15px;">
+                    „Много съм доволен от услугите и вниманието към пациента.“
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- SCHEDULE -->
+<section id="schedule" style="padding:60px 0; background:var(--mint);">
+    <div class="shell">
+        <h2 style="font-size:28px; font-weight:700; margin-bottom:10px;">Работно време и записване</h2>
+        <p style="color:var(--text-muted); margin-bottom:30px; font-size:16px;">
+            Работим с предварително записани часове. Графикът по дни се обявява редовно във Facebook страницата.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:22px;">
+
+            <div style="background:white; padding:22px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:12px;">Записване на час</h3>
+
+                <div style="margin-bottom:10px;">
+                    <strong>Първоначален преглед:</strong><br>
+                    Всеки понеделник · 09:00 – 13:00 ч.
+                </div>
+
+                <div style="margin-bottom:10px;">
+                    <strong>Контролни прегледи:</strong><br>
+                    Всеки работен ден · 09:00 – 13:00 ч.
+                </div>
+
+                <div style="margin-bottom:10px;">
+                    <strong>Месечен график:</strong><br>
+                    Публикува се във Facebook страницата.
+                </div>
+
+                <p style="color:var(--text-muted); font-size:15px;">
+                    Примерен график (декември): 1, 2, 3, 7, 8, 9, 10, 13, 15, 16, 17, 21, 22, 28, 29, 30.
+                </p>
+            </div>
+
+            <div id="contact" style="background:white; padding:22px; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow);">
+                <h3 style="font-size:20px; margin-bottom:12px;">Контакти</h3>
+
+                <p style="margin-bottom:10px;">
+                    <strong>Адрес:</strong><br>
+                    ул. „Славянска“ 159–161<br>
+                    Костинброд, България
+                </p>
+
+                <p style="margin-bottom:10px;">
+                    <strong>Телефон:</strong><br>
+                    <a href="tel:0897908801" style="color:var(--teal-accent); text-decoration:none;">089 790 8801</a>
+                </p>
+
+                <p style="margin-bottom:10px;">
+                    <strong>Имейл:</strong><br>
+                    <a href="mailto:healthcentrealfa@gmail.com" style="color:var(--teal-accent); text-decoration:none;">
+                        healthcentrealfa@gmail.com
+                    </a>
+                </p>
+
+                <p style="margin-bottom:10px;">
+                    <strong>Facebook:</strong><br>
+                    <a href="https://www.facebook.com/healthcentrealfa" target="_blank" style="color:var(--teal-accent); text-decoration:none;">
+                        facebook.com/healthcentrealfa
+                    </a>
+                </p>
+
+                <div style="margin-top:16px; padding:14px; border:2px dashed var(--border); border-radius:var(--radius); background:var(--blue-soft); text-align:center; color:var(--text-muted); font-size:14px;">
+                    Тук може да се добави Google Maps карта
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" style="padding:60px 0;">
+    <div class="shell">
+        <h2 style="font-size:28px; font-weight:700; margin-bottom:10px;">Снимки от центъра</h2>
+        <p style="color:var(--text-muted); margin-bottom:30px; font-size:16px;">
+            Поглед към атмосферата, кабинетите и екипа на „Алфа“.
+        </p>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px;">
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Фасада / вход – снимка
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Чакалня – снимка
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Диагностичен кабинет – снимка
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Зала за масажи – снимка
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Екипът – снимка
+            </div>
+
+            <div style="background:white; padding:20px; border-radius:var(--radius); border:2px dashed var(--border); height:180px; display:flex; align-items:center; justify-content:center; color:var(--text-muted);">
+                Холистична атмосфера – снимка
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:white; padding:20px 0; border-top:1px solid var(--border); margin-top:40px;">
+    <div class="shell" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:14px; color:var(--text-muted);">
+        <div>© Здравен център Алфа, Костинброд. Всички права запазени.</div>
+        <div style="display:flex; gap:16px;">
+            <a href="#top" style="color:var(--teal-accent); text-decoration:none;">Начало</a>
+            <a href="#services" style="color:var(--teal-accent); text-decoration:none;">Услуги</a>
+            <a href="#contact" style="color:var(--teal-accent); text-decoration:none;">Контакти</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
 
